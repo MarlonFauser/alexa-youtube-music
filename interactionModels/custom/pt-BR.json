@@ -1,0 +1,98 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "abrir youtube music",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "SongIntent",
+          "slots": [
+            {
+              "name": "Song",
+              "type": "AMAZON.MusicRecording",
+              "samples": [
+                "{Song}"
+              ]
+            }
+          ],
+          "samples": [
+            "{Song}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "custom"
+              }
+            }
+          ],
+          "name": "AMAZON.MusicRecording"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SongIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Song",
+              "type": "AMAZON.MusicRecording",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1019279267505.1480409634393"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1019279267505.1480409634393",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Claro, o que deseja ouvir?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "5"
+}
